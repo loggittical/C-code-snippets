@@ -1,0 +1,46 @@
+// templated max function
+template<T>
+T max(T a,T b){return a>b?a:b; }
+
+//Implement a tree
+
+template <T>  // correct this!!!
+class node<T>
+{
+    node<T> * left; node<T> * right; T data;
+}
+
+//Preorder traversal
+
+void preOrder(node *root)
+{
+    cout<<node->data;
+    preOrder(node *left);
+    preOrder(node *right);
+}
+
+//Postorder traversal
+
+void postOrder(node *root)
+{
+    postOrder(node *left);
+    postOrder(node *right);
+    cout<<node->data;
+}
+void inOrder(node *root)
+{
+    inOrder(node *left);
+    cout<<node->data;
+    inOrder(node *right);
+}
+// height of a binary tree
+
+int height(node * root){
+    int l=-1; int r=-1;
+    if (root){
+        l=height(root->left)+1;
+        r=height(root->right)+1;
+    }
+    return r>l?r:l;
+    
+}
